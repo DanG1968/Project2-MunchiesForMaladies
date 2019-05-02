@@ -25,6 +25,7 @@ public class UserRepositoryHibernate implements UserRepository{
 		
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<User> findall() {
 		return sessionFactory.getCurrentSession().createCriteria(User.class).list();

@@ -14,7 +14,7 @@ public class UserServiceAlpha implements UserService{
 
 	private static Logger logger= Logger.getLogger(UserServiceAlpha.class);
 	// Dependency
-	
+	@Autowired
 	private UserRepository userRepository;
 	
 	public UserServiceAlpha() {}
@@ -24,7 +24,7 @@ public class UserServiceAlpha implements UserService{
 		this.userRepository=userRepository;
 	}
 	
-	@Autowired
+	
 	public void setHibernate(UserRepository userRepository) {
 		this.userRepository = userRepository;
 	}

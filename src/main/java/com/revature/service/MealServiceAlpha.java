@@ -15,7 +15,7 @@ public class MealServiceAlpha implements MealService {
 	
 	private static Logger logger= Logger.getLogger(MealServiceAlpha.class);
 	// Dependency
-	
+	@Autowired
 	private MealRepository mealRepository;
 	
 	public MealServiceAlpha() {}
@@ -25,7 +25,7 @@ public class MealServiceAlpha implements MealService {
 		this.mealRepository=mealRepository;
 	}
 	
-	@Autowired
+	
 	public void setHibernate(MealRepository mealRepository) {
 		this.mealRepository = mealRepository;
 	}

@@ -14,7 +14,7 @@ public class AilmentServiceAlpha implements AilmentService {
 	
 	private static Logger logger= Logger.getLogger(MealServiceAlpha.class);
 	// Dependency
-	
+	@Autowired
 	private AilmentRepository ailmentRepository;
 	
 	public AilmentServiceAlpha() {}
@@ -24,7 +24,7 @@ public class AilmentServiceAlpha implements AilmentService {
 		this.ailmentRepository=ailmentRepository;
 	}
 	
-	@Autowired
+	
 	public void setHibernate(AilmentRepository ailmentRepository) {
 		this.ailmentRepository = ailmentRepository;
 	}
