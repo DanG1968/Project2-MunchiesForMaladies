@@ -1,9 +1,5 @@
 package com.revature.repository;
 
-<<<<<<< HEAD
-public class UserRepositoryHibernate implements UserRepository{
-
-=======
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -53,5 +49,4 @@ public class UserRepositoryHibernate implements UserRepository{
 		}
 	}
 
->>>>>>> dev
 }

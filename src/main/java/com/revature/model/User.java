@@ -1,8 +1,5 @@
 package com.revature.model;
 
-<<<<<<< HEAD
-public class User {
-=======
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -63,9 +60,4 @@ public class User {
 		return "User [id=" + id + ", name=" + name + ", password=" + password + "]";
 	}
 	
-	
-	
-	
->>>>>>> dev
-
 }

@@ -1,9 +1,5 @@
 package com.revature.service;
 
-<<<<<<< HEAD
-public class UserServiceAlpha implements UserService{
-
-=======
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -49,5 +45,4 @@ public class UserServiceAlpha implements UserService{
 		return userRepository.findByName(name);
 	}
 
->>>>>>> dev
 }
