@@ -23,6 +23,7 @@ public class MealRepositoryHibernate implements MealRepository {
 		logger.trace("Inject session factory bean");
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Meal> findall() {
 		return sessionFactory.getCurrentSession().createCriteria(Meal.class).list();

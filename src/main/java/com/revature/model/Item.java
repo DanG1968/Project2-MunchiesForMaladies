@@ -8,8 +8,11 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 @Table(name="ITEM")
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Item {
 
 	@Id
@@ -47,10 +50,5 @@ public class Item {
 	@Override
 	public String toString() {
 		return "Item [id=" + id + ", name=" + name + "]";
-	}
-	
-	
-	
-	
-		
+	}		
 }

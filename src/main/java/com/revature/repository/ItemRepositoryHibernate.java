@@ -6,10 +6,11 @@ import org.apache.log4j.Logger;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import com.revature.model.Item;
-import com.revature.model.User;
 
+@Repository("itemRepository")
 public class ItemRepositoryHibernate implements ItemRepository{
 
 	private static Logger logger = Logger.getLogger(ItemRepositoryHibernate.class);
@@ -19,7 +20,7 @@ public class ItemRepositoryHibernate implements ItemRepository{
 	
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<User> findall() {
+	public List<Item> findall() {
 		return sessionFactory.getCurrentSession().createCriteria(Item.class).list();
 	}
 

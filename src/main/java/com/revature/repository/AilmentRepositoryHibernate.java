@@ -24,6 +24,7 @@ public class AilmentRepositoryHibernate implements AilmentRepository {
 		logger.trace("Inject session factory bean");
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Ailment> findall() {
 		return sessionFactory.getCurrentSession().createCriteria(Ailment.class).list();
