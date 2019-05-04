@@ -6,8 +6,9 @@ import com.revature.model.Ailment;
 
 public interface AilmentRepository {
 	
-	List<Ailment> findall();
 	void save(Ailment ailment);
+	List<Ailment> findall();
 	Ailment findByName(String name);
+	Ailment findbyID(int id);
 
 }
