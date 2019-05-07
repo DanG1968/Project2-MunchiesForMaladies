@@ -12,7 +12,7 @@ import com.revature.repository.AilmentRepository;
 @Service("ailmentService")
 public class AilmentServiceAlpha implements AilmentService {
 	
-	private static Logger logger= Logger.getLogger(MealServiceAlpha.class);
+	private static Logger logger= Logger.getLogger(AilmentServiceAlpha.class);
 	// Dependency
 	@Autowired
 	private AilmentRepository ailmentRepository;
