@@ -1,12 +1,7 @@
 package com.revature.model;
 
-import com.fasterxml.jackson.annotation.JsonView;
-import com.google.common.collect.Sets;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
-
-import javax.persistence.*;
+import static com.revature.model.UserRole.ROLE_ADMIN;
+import static com.revature.model.UserRole.ROLE_USER;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -14,8 +9,24 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
-import static com.revature.model.UserRole.ROLE_ADMIN;
-import static com.revature.model.UserRole.ROLE_USER;
+import javax.persistence.CollectionTable;
+import javax.persistence.Column;
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+import com.google.common.collect.Sets;
+
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 @Entity
 @Table(name="USERS")
