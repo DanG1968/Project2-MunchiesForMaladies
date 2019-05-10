@@ -1,47 +1,34 @@
 package com.revature.model;
 
-import java.util.Set;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
 @Table(name="AILMENT")
-@XmlRootElement(name="ailment")
-@XmlAccessorType(XmlAccessType.FIELD)
 public class Ailment {
 	
 	@Id
+	@GeneratedValue(strategy=GenerationType.SEQUENCE,generator="ailmentSequence")
+	@SequenceGenerator(name="ailmentSequence",sequenceName="AILMENT_SEQ", allocationSize=1)
 	@Column(name="A_ID")
-	@XmlAttribute
 	private int id;
-	
 	@Column(name="A_NAME")
-	@XmlAttribute
 	private String name;
-
-	@OneToMany(cascade=CascadeType.ALL)
-	@JoinTable(name="AIL_ITEM", joinColumns={@JoinColumn(name="AILMENT_ID", 
-	referencedColumnName="A_ID")}
-    , inverseJoinColumns={@JoinColumn(name="ITEM_ID", referencedColumnName="I_ID")})
-    private Set<Item> items;
+	@Column(name="A_DESCRIPTION")
+	private String description;
 	
 	public Ailment() {}
 
-	public Ailment(int id, String name) {
+	public Ailment(int id, String name, String description) {
 		super();
 		this.id = id;
 		this.name = name;
+		this.description = description;
 	}
 
 	public int getId() {
@@ -60,10 +47,17 @@ public class Ailment {
 		this.name = name;
 	}
 
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
 
 	@Override
 	public String toString() {
-		return "Ailment [id=" + id + ", name=" + name + "]";
+		return "Ailment [id=" + id + ", name=" + name + ", description=" + description + "]";
 	}
 	
 	

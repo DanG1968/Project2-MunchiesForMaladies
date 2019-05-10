@@ -17,12 +17,8 @@ public class AilmentRepositoryHibernate implements AilmentRepository {
 
 	
 	public static Logger logger = Logger.getLogger(MealRepositoryHibernate.class);
-	
 	@Autowired
 	private SessionFactory sessionFactory;
-	 public void setSessionFactory(SessionFactory sessionFactory) {
-	        this.sessionFactory = sessionFactory;
-	 }
 	
 	public AilmentRepositoryHibernate() {
 		logger.trace("Inject session factory bean");
@@ -44,19 +40,6 @@ public class AilmentRepositoryHibernate implements AilmentRepository {
 		try {
 			return (Ailment) sessionFactory.getCurrentSession().createCriteria(Ailment.class)
 					.add(Restrictions.like("name",  name))
-					.list()
-					.get(0);
-		} catch (IndexOutOfBoundsException e) {
-				return null;
-			
-		}
-	}
-
-	@Override
-	public Ailment findbyID(int id) {
-		try {
-			return (Ailment) sessionFactory.getCurrentSession().createCriteria(Ailment.class)
-					.add(Restrictions.like("ID",  id))
 					.list()
 					.get(0);
 		} catch (IndexOutOfBoundsException e) {

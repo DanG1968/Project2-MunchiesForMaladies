@@ -32,8 +32,8 @@ public class UserRepositoryHibernate implements UserRepository{
 	}
 
 	@Override
-	public void save(User user) {
-		sessionFactory.getCurrentSession().save(user);
+	public User save(User user) {
+		return (User)sessionFactory.getCurrentSession().save(user);
 	}
 
 	@Override
@@ -46,6 +46,19 @@ public class UserRepositoryHibernate implements UserRepository{
 		} catch (IndexOutOfBoundsException e) {
 				return null;
 			
+		}
+	}
+
+	@Override
+	public User findByEmail(String email) {
+		try {
+			return (User) sessionFactory.getCurrentSession().createCriteria(User.class)
+					.add(Restrictions.like("email",  email))
+					.list()
+					.get(0);
+		} catch (IndexOutOfBoundsException e) {
+			return null;
+
 		}
 	}
 
