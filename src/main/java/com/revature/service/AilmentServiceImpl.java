@@ -10,16 +10,16 @@ import com.revature.model.Ailment;
 import com.revature.repository.AilmentRepository;
 
 @Service("ailmentService")
-public class AilmentServiceAlpha implements AilmentService {
+public class AilmentServiceImpl implements AilmentService {
 	
 	private static Logger logger= Logger.getLogger(MealServiceAlpha.class);
 	// Dependency
 	@Autowired
 	private AilmentRepository ailmentRepository;
 	
-	public AilmentServiceAlpha() {}
+	public AilmentServiceImpl() {}
 	
-	public AilmentServiceAlpha(AilmentRepository ailmentRepository) {
+	public AilmentServiceImpl(AilmentRepository ailmentRepository) {
 		logger.trace("Constructor Injection");
 		this.ailmentRepository=ailmentRepository;
 	}

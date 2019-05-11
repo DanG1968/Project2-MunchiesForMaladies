@@ -14,7 +14,7 @@ public class ViewControllerAlpha implements ViewController{
 	@RequestMapping(value= {"/"} , method=RequestMethod.GET)
 	public String index() {
 		logger.trace("Returning index.html");
-		return "/static/index.html";
+		return("/static/index.html");
 	}
 
 }
