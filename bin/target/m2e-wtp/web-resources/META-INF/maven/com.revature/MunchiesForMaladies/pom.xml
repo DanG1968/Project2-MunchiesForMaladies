@@ -5,7 +5,7 @@
 	<groupId>com.revature</groupId>
 	<artifactId>MunchiesForMaladies</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+		<packaging>war</packaging>
 
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -74,11 +74,11 @@
 			<version>4.3.11.Final</version>
 		</dependency>
 		<!-- OJDBC 7 LOCAL REPO -->
-		<!-- <dependency> -->
-		<!-- <groupId>com.oracle</groupId> -->
-		<!-- <artifactId>ojdbc7</artifactId> -->
-		<!-- <version>12.1.0</version> -->
-		<!-- </dependency> -->
+<!--		<dependency>-->
+<!--			<groupId>com.oracle</groupId>-->
+<!--			<artifactId>ojdbc7</artifactId>-->
+<!--			<version>12.1.0</version>-->
+<!--		</dependency>-->
 		<!-- https://mvnrepository.com/artifact/com.oracle/ojdbc14 -->
 		<!-- https://mvnrepository.com/artifact/ojdbc/ojdbc -->
 		<!-- https://mvnrepository.com/artifact/com.oracle/ojdbc -->
@@ -87,15 +87,17 @@
 		<dependency>
 			<groupId>com.oracle</groupId>
 			<artifactId>ojdbc7</artifactId>
-			<version>12.1.0</version>
+			<version>12.1.0.2</version>
+			<systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/ojdbc7-12.1.0.2.jar</systemPath>
+			<scope>system</scope>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
-		<!-- <dependency> -->
-		<!-- <groupId>org.postgresql</groupId> -->
-		<!-- <artifactId>postgresql</artifactId> -->
-		<!-- <version>42.2.5</version> -->
-		<!-- </dependency> -->
+<!--		<dependency>-->
+<!--			<groupId>org.postgresql</groupId>-->
+<!--			<artifactId>postgresql</artifactId>-->
+<!--			<version>42.2.5</version>-->
+<!--		</dependency>-->
 
 		<!-- Spring 4 MVC -->
 		<dependency>
@@ -121,11 +123,11 @@
 			<artifactId>spring-core</artifactId>
 			<version>5.1.5.RELEASE</version>
 		</dependency>
-		<dependency>
-			<groupId>io.jsonwebtoken</groupId>
-			<artifactId>jjwt</artifactId>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
 			<version>0.9.1</version>
-		</dependency>
+        </dependency>
 		<!-- https://mvnrepository.com/artifact/com.google.collect/com.springsource.com.google.common.collect -->
 		<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
 		<dependency>
@@ -133,30 +135,7 @@
 			<artifactId>guava</artifactId>
 			<version>27.1-jre</version>
 		</dependency>
-	</dependencies>
 
-	<build>
-		<finalName>Devops Example</finalName>
-		<pluginManagement>
-			<plugins>
-				<!-- Tomcat Maven Plugin -->
-				<plugin>
-					<groupId>org.apache.tomcat.maven</groupId>
-					<artifactId>tomcat7-maven-plugin</artifactId>
-					<version>2.0</version>
-					<configuration>
-						<!-- manager-script URL -->
-						<url>http://localhost:8080/manager/text</url>
-						<!-- overwrites the war if exists -->
-						<update>true</update>
-						<!-- refers to <server> credentials configured in maven settings.xml 
-							which refers to credentials in the tomcat-users.xml -->
-						<server>maven</server>
-						<!-- what path to deploy to tomcat, then would be available at your.aws.ip:8080/example -->
-						<path>/DevopsExample</path>
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
-	</build>
+
+	</dependencies>
 </project>

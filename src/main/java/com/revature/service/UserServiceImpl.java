@@ -1,4 +1,4 @@
-package com.revature.service.user;
+package com.revature.service;
 
 import com.google.common.collect.Sets;
 import com.revature.model.User;

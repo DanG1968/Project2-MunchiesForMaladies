@@ -2,8 +2,9 @@ package com.revature.rest;
 
 import com.fasterxml.jackson.annotation.JsonView;
 import com.revature.model.User;
-import com.revature.service.token.TokenAuthenticationService;
-import com.revature.service.user.UserService;
+import com.revature.service.TokenAuthenticationService;
+import com.revature.service.UserService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.AuthenticationException;
