@@ -157,15 +157,21 @@
 			<artifactId>aspectjweaver</artifactId>
 			<version>1.8.10</version>
 		</dependency>
-
-
 	</dependencies>
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> c5e461c7d7b46063788423f9de9998c5cc62132e
 	<build>
 		<finalName>Devops Example</finalName>
 		<pluginManagement>
 			<plugins>
+<<<<<<< HEAD
 				<!-- Tomcat Maven Plugin -->
+=======
+				<!-- Tomcat Maven Plugin  -->
+>>>>>>> c5e461c7d7b46063788423f9de9998c5cc62132e
 				<plugin>
 					<groupId>org.apache.tomcat.maven</groupId>
 					<artifactId>tomcat7-maven-plugin</artifactId>
@@ -173,16 +179,29 @@
 					<configuration>
 						<!-- manager-script URL -->
 						<url>http://localhost:8080/manager/text</url>
+<<<<<<< HEAD
 						<!-- overwrites the war if exists -->
 						<update>true</update>
 						<!-- refers to <server> credentials configured in maven settings.xml 
 							which refers to credentials in the tomcat-users.xml -->
 						<server>maven</server>
 						<!-- what path to deploy to tomcat, then would be available at your.aws.ip:8080/example -->
+=======
+						<!-- overwrites the war if exists  -->
+						<update>true</update>
+						<!-- refers to <server> credentials configured in maven settings.xml which refers to credentials in the tomcat-users.xml -->
+						<server>maven</server>
+						<!-- what path to deploy to tomcat, then would be available at your.aws.ip:8080/example  -->
+>>>>>>> c5e461c7d7b46063788423f9de9998c5cc62132e
 						<path>/DevopsExample</path>
 					</configuration>
 				</plugin>
 			</plugins>
 		</pluginManagement>
+<<<<<<< HEAD
 	</build>
+=======
+	</build>	
+	
+>>>>>>> c5e461c7d7b46063788423f9de9998c5cc62132e
 </project>
