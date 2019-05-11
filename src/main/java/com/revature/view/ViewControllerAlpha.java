@@ -11,10 +11,10 @@ public class ViewControllerAlpha implements ViewController{
 	private static Logger logger = Logger.getLogger(ViewControllerAlpha.class);
 
 	@Override
-	@RequestMapping(value= {"/", "/index"} , method=RequestMethod.GET)
+	@RequestMapping(value= {"/"} , method=RequestMethod.GET)
 	public String index() {
 		logger.trace("Returning index.html");
-		return("index");
+		return "/static/index.html";
 	}
 
 }

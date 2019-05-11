@@ -1,4 +1,4 @@
-package com.revature.service.token;
+package com.revature.service;
 
 
 import com.revature.model.User;
