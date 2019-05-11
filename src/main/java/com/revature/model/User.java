@@ -1,6 +1,5 @@
 package com.revature.model;
 
-import com.fasterxml.jackson.annotation.JsonView;
 import com.google.common.collect.Sets;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

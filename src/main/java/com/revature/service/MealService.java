@@ -6,8 +6,8 @@ import com.revature.model.Meal;
 
 public interface MealService {
 	
-	public boolean registerUser(Meal meal);
-	public List<Meal> getAllUsers();
+	public boolean registerMeal(Meal meal);
+	public List<Meal> getAllMeals();
 	public Meal getMeal(String name);
 
 }

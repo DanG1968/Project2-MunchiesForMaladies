@@ -30,14 +30,13 @@ public class MealServiceAlpha implements MealService {
 		this.mealRepository = mealRepository;
 	}
 	
-	@Override
-	public boolean registerUser(Meal meal) {
+	public boolean registerMeal(Meal meal) {
 		mealRepository.save(meal);
 		return meal.getId() !=0;
 	}
 
 	@Override
-	public List<Meal> getAllUsers() {
+	public List<Meal> getAllMeals() {
 		return mealRepository.findall();
 	}
 

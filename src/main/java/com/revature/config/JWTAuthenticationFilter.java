@@ -1,8 +1,7 @@
 package com.revature.config;
 
 import com.revature.model.User;
-import com.revature.service.TokenAuthenticationService;
-
+import com.revature.service.token.TokenAuthenticationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
