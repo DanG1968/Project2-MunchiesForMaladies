@@ -4,10 +4,8 @@
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:mvc="http://www.springframework.org/schema/mvc"
 	xmlns:tx="http://www.springframework.org/schema/tx"
-	xmlns:aop="http://www.springframework.org/schema/aop"
-xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
-		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd">
 
@@ -18,14 +16,12 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.sprin
 
 	<!-- Enable @Transactional -->
 	<tx:annotation-driven />
-	<aop:aspectj-autoproxy />
 
 	<!-- Package Scan -->
 	<context:component-scan	base-package="com.revature.repository" />
 	<context:component-scan	base-package="com.revature.service" />
 	<context:component-scan	base-package="com.revature.view" />
 	<context:component-scan	base-package="com.revature.rest" />
-	<context:component-scan base-package="com.revature.aop"/>
 
 	<!-- Hibernate Integration with Contextual Sessions -->
 	<bean name="dataSource"
