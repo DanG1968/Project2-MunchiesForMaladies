@@ -1,21 +1,16 @@
 package com.revature.rest;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.security.core.AuthenticationException;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
-
+import com.fasterxml.jackson.annotation.JsonView;
 import com.revature.model.User;
 import com.revature.service.TokenAuthenticationService;
 import com.revature.service.UserService;
 
-/**
- * Created by Evelan on 27/12/2016.
- */
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.web.bind.annotation.*;
+
+
 @CrossOrigin
 @RestController
 public class AuthenticationController {
