@@ -8,9 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;
 
-/**
- * Created by Evelan on 26/12/2016.
- */
 @Service
 public class TokenAuthenticationServiceImpl implements TokenAuthenticationService {
 
