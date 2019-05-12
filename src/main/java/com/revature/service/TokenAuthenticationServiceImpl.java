@@ -1,7 +1,7 @@
-package com.revature.service.token;
+package com.revature.service;
 
 import com.revature.model.User;
-import com.revature.service.user.UserService;
+
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Autowired;

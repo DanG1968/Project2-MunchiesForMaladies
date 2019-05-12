@@ -1,4 +1,4 @@
-package com.revature.service.user;
+package com.revature.service;
 
 import com.revature.model.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
