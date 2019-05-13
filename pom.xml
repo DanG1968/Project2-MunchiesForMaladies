@@ -144,7 +144,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>Devops Example</finalName>
+		<finalName>Munchies For Maladies</finalName>
 		<pluginManagement>
 			<plugins>
 				<!-- Tomcat Maven Plugin -->
@@ -161,7 +161,7 @@
 							which refers to credentials in the tomcat-users.xml -->
 						<server>maven</server>
 						<!-- what path to deploy to tomcat, then would be available at your.aws.ip:8080/example -->
-						<path>/DevopsExample</path>
+						<path>/MunchiesForMaladies</path>
 					</configuration>
 				</plugin>
 			</plugins>
